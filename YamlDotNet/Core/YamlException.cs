@@ -81,6 +81,6 @@ namespace YamlDotNet.Core
         {
         }
 
-        public override string Message => $"({Start}) - ({End}): {Reason}";
+        public override string Message => Start == Mark.Empty ? Reason : $"({Start}) - ({End}): {Reason}";
     }
 }
